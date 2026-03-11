@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>noir-ui</title>
+  <link rel="stylesheet" href="./styles/noir-ui.css">
+  <link rel="stylesheet" href="./styles/landing.css">
+</head>
+<body class="nu-theme nl-body">
+  <main class="nl-wrap">
+    <nav class="nl-nav nl-reveal" data-reveal style="--d: 0s;">
+      <a class="nl-brand" href="./index.html" aria-label="noir-ui home">
+        <span class="nl-brand-mark nl-logo-wave"></span>
+        <span class="nl-brand-name">noir-ui</span>
+      </a>
+
+      <div class="nl-nav-links">
+        <a class="nl-nav-link" href="./registry.html">Registry</a>
+        <a class="nl-nav-link" href="./registry.html">Components</a>
+        <a class="nl-nav-link" href="./README.md">README</a>
+      </div>
+
+      <a class="nu-btn nu-btn-sm nu-btn-solid" href="./pages/command-palette.html" data-lucky>I'm Feeling Lucky</a>
+    </nav>
+
+    <section class="nl-hero">
+      <article class="nl-hero-main nl-reveal" data-reveal style="--d: 0.04s;">
+        <p class="nl-kicker">Minimal Luxury Interface Library</p>
+        <h1 class="nl-headline">
+          Built for<br>
+          <em>high-trust</em> products
+        </h1>
+        <p class="nl-lead">
+          noir-ui is a copy-paste component system for teams who want strong product surfaces,
+          disciplined hierarchy, and fast implementation without framework lock-in.
+        </p>
+
+        <div class="nl-hero-actions">
+          <a class="nu-btn nu-btn-lg nu-btn-solid" href="./registry.html">Browse 85 Components</a>
+          <a class="nu-btn nu-btn-lg" href="./pages/command-palette.html" data-lucky>I'm Feeling Lucky</a>
+        </div>
+
+        <ul class="nl-pill-row" aria-label="Core principles">
+          <li>Vanilla HTML/CSS/JS</li>
+          <li>Shared init API</li>
+          <li>Strong A11y baseline</li>
+        </ul>
+      </article>
+
+      <aside class="nl-hero-side nl-reveal" data-reveal style="--d: 0.08s;">
+        <header class="nl-side-head">
+          <p>Now Shipping</p>
+          <span>v2</span>
+        </header>
+
+        <div class="nl-side-list" role="list" aria-label="Category overview">
+          <article class="nl-side-item" role="listitem">
+            <p>App Surfaces</p>
+            <strong>16</strong>
+          </article>
+          <article class="nl-side-item" role="listitem">
+            <p>Data/Workflow</p>
+            <strong>15</strong>
+          </article>
+          <article class="nl-side-item" role="listitem">
+            <p>Overlays/Advanced Forms</p>
+            <strong>15</strong>
+          </article>
+          <article class="nl-side-item" role="listitem">
+            <p>Core System</p>
+            <strong>39</strong>
+          </article>
+        </div>
+
+        <section class="nl-side-note" aria-label="Keyboard flow note">
+          <p>Keyboard-first workflows</p>
+          <div class="nl-key-row">
+            <span class="nl-kbd">Tab</span>
+            <span class="nl-kbd">Shift+Tab</span>
+            <span class="nl-kbd">Esc</span>
+          </div>
+          <small>Focus order and dismiss patterns are standardized through shared runtime hooks.</small>
+        </section>
+      </aside>
+    </section>
+
+    <section class="nl-rack nl-reveal" data-reveal style="--d: 0.12s;">
+      <article class="nl-rack-item">
+        <p>Component pages</p>
+        <h3>85</h3>
+      </article>
+      <article class="nl-rack-item">
+        <p>Design families</p>
+        <h3>10</h3>
+      </article>
+      <article class="nl-rack-item">
+        <p>Framework lock-in</p>
+        <h3>0</h3>
+      </article>
+      <article class="nl-rack-item">
+        <p>Primary intent</p>
+        <h3>App Surfaces</h3>
+      </article>
+    </section>
+
+    <section class="nl-grid">
+      <article class="nl-card nl-reveal" data-reveal style="--d: 0.16s;">
+        <h3>Editorial Typographic System</h3>
+        <p>High-contrast hierarchy with serif headlines and mono metadata keeps dashboards legible and premium.</p>
+      </article>
+
+      <article class="nl-card nl-reveal" data-reveal style="--d: 0.2s;">
+        <h3>Surface-Driven Layout Primitives</h3>
+        <p>Shells, rails, drawers, and resizable panels form reliable scaffolding for real product workflows.</p>
+      </article>
+
+      <article class="nl-card nl-reveal" data-reveal style="--d: 0.24s;">
+        <h3>Advanced Interaction Patterns</h3>
+        <p>Command palette, context menu, date range, and toast stack work through one shared initialization API.</p>
+      </article>
+
+      <article class="nl-card nl-reveal" data-reveal style="--d: 0.28s;">
+        <h3>Copy-Paste Deployment</h3>
+        <p>Open any component page, switch to Snippet or Integration tab, and move directly into implementation.</p>
+      </article>
+    </section>
+
+    <section class="nl-demo nl-reveal" data-reveal style="--d: 0.32s;" aria-label="Composed interface preview">
+      <header class="nl-demo-head">
+        <p>Composition Preview</p>
+        <span>app-shell + command-bar + table + inspector</span>
+      </header>
+
+      <div class="nl-demo-shell">
+        <aside class="nl-demo-nav">
+          <span class="is-active">Overview</span>
+          <span>Classes</span>
+          <span>Teachers</span>
+          <span>Settings</span>
+        </aside>
+
+        <div class="nl-demo-main">
+          <div class="nl-demo-toolbar">
+            <span class="nl-demo-search">/ search classes</span>
+            <span class="nl-demo-chip">Export</span>
+            <span class="nl-demo-chip is-accent">Apply</span>
+          </div>
+
+          <div class="nl-demo-grid">
+            <article class="nl-demo-table">
+              <div class="nl-demo-line"></div>
+              <div class="nl-demo-line w-84"></div>
+              <div class="nl-demo-line w-72"></div>
+              <div class="nl-demo-line w-91"></div>
+            </article>
+
+            <article class="nl-demo-inspector">
+              <p>Inspector</p>
+              <div class="nl-demo-line w-86"></div>
+              <div class="nl-demo-line w-66"></div>
+              <div class="nl-demo-line w-58"></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nl-cta nl-reveal" data-reveal style="--d: 0.36s;">
+      <div class="nl-cta-copy">
+        <h2>Start Building</h2>
+        <p>Use registry filters, open any component page, and copy implementation-ready markup in seconds.</p>
+      </div>
+      <div class="nu-row">
+        <a class="nu-btn nu-btn-lg nu-btn-solid" href="./registry.html">Enter Registry</a>
+        <a class="nu-btn nu-btn-lg" href="./pages/resizable-panels.html" data-lucky>I'm Feeling Lucky</a>
+      </div>
+    </section>
+
+    <footer class="nu-footer nl-footer nl-reveal" data-reveal style="--d: 0.4s;">
+      <div class="nu-footer-main">
+        <div class="nu-footer-brand">
+          <span class="nu-footer-mark nl-logo-wave" aria-hidden="true"></span>
+          <div>
+            <strong>noir-ui</strong>
+            <p>Component library for elegant product surfaces</p>
+          </div>
+        </div>
+
+        <nav class="nu-footer-nav" aria-label="Footer">
+          <a href="./registry.html">Registry</a>
+          <a href="./pages/footer.html">Footer Component</a>
+          <a href="./CONTRIBUTING.md">Contributing</a>
+          <a href="./LICENSE">License</a>
+          <a href="./README.md">README</a>
+        </nav>
+      </div>
+
+      <div class="nu-footer-meta">
+        <span>Copyright &copy; 2026 Benjamin Lee</span>
+        <span>All rights reserved.</span>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var luckyButtons = document.querySelectorAll('[data-lucky]');
+      var luckyTargets = [
+        'accordion', 'activity-stream', 'app-shell', 'audit-log', 'avatar', 'board-card', 'bottom-sheet', 'breadcrumb', 'button', 'calendar-heatmap',
+        'callout', 'card', 'changelog-feed', 'checkbox', 'chip', 'combobox', 'command-bar', 'command-menu', 'command-palette', 'context-menu',
+        'data-table-advanced', 'date-picker', 'date-range-picker', 'detail-view', 'drawer', 'dropdown', 'dropdown-profile', 'dropzone', 'empty',
+        'filter-bar', 'footer', 'form-login', 'form-signup', 'inline-edit', 'input', 'input-group', 'inspector-panel', 'kanban-board', 'list-view', 'metric-tile',
+        'metric-trend', 'modal', 'multi-select', 'notification-center', 'otp', 'pagination', 'password-strength', 'popover', 'progress',
+        'properties-panel', 'quick-actions-fab', 'radio', 'rail-nav', 'range', 'resizable-panels', 'segment', 'select', 'sheet', 'shortcut-hint-bar',
+        'side-nav', 'skeleton', 'sparkline-row', 'split-button', 'split-layout', 'stats', 'status-strip', 'step-form', 'stepper', 'subnav-pills',
+        'switch', 'table', 'table-column-manager', 'table-row-menu', 'table-sticky-header', 'tabs', 'tags-input', 'textarea', 'time-picker',
+        'timeline', 'timeline-compact', 'toast', 'toast-stack', 'tooltip', 'top-nav', 'workspace-tabs'
+      ];
+
+      if (luckyButtons.length) {
+        for (var n = 0; n < luckyButtons.length; n += 1) {
+          luckyButtons[n].addEventListener('click', function (event) {
+            event.preventDefault();
+            var picked = luckyTargets[Math.floor(Math.random() * luckyTargets.length)];
+            window.location.href = './pages/' + picked + '.html';
+          });
+        }
+      }
+
+      var items = document.querySelectorAll('[data-reveal]');
+      if (!items.length) return;
+
+      if (!('IntersectionObserver' in window)) {
+        for (var i = 0; i < items.length; i += 1) {
+          items[i].classList.add('is-in');
+        }
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        for (var j = 0; j < entries.length; j += 1) {
+          var entry = entries[j];
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-in');
+            observer.unobserve(entry.target);
+          }
+        }
+      }, { threshold: 0.16, rootMargin: '0px 0px -48px 0px' });
+
+      for (var k = 0; k < items.length; k += 1) {
+        observer.observe(items[k]);
+      }
+    })();
+  </script>
+</body>
+</html>

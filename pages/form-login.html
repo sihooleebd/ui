@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>noir-ui / form-login</title>
+  <link rel="stylesheet" href="../styles/noir-ui.css">
+</head>
+<body class="nu-theme">
+  <main class="nu-container nu-page-shell" data-component-page="form-login" style="padding: 32px 0 56px;">
+    <header class="nu-page-top">
+      <nav class="nu-breadcrumb" aria-label="Breadcrumb">
+        <a href="../registry.html">Registry</a>
+        <span class="nu-crumb-sep">/</span>
+        <span>form-login</span>
+      </nav>
+      <h1 class="nu-headline" style="margin: 0;">form-login</h1>
+      <p class="nu-subtitle">Form-oriented component for input, validation flow, and data entry layout.</p>
+      <div class="nu-row">
+        <span class="nu-badge">Forms</span>
+        <span class="nu-badge">Copy-paste</span>
+        <span class="nu-badge">noir-ui</span>
+      </div>
+      <div class="nu-row">
+        <a class="nu-btn nu-btn-sm" href="../registry.html">All Components</a>
+        <a class="nu-btn nu-btn-sm" href="../components/form-login.html">Raw Snippet</a>
+        <a class="nu-btn nu-btn-sm" href="./footer.html">Prev: footer</a>
+        <a class="nu-btn nu-btn-sm" href="./form-signup.html">Next: form-signup</a>
+      </div>
+    </header>
+
+    <div class="nu-page-grid">
+      <section class="nu-page-main">
+        <div class="nu-segment nu-page-view" data-view-tabs>
+          <button class="nu-btn is-active" type="button" data-view="preview">Preview</button>
+          <button class="nu-btn" type="button" data-view="code">Snippet</button>
+          <button class="nu-btn" type="button" data-view="usage">Integration</button>
+        </div>
+
+        <article class="nu-doc-card" data-pane="preview">
+          <header class="nu-doc-head">
+            <h3 class="nu-doc-title">Preview</h3>
+            <div class="nu-row">
+              <span class="nu-page-status" data-copy-status></span>
+              <button class="nu-btn nu-btn-sm" type="button" data-copy-snippet>Copy Snippet</button>
+            </div>
+          </header>
+          <div class="nu-doc-preview" data-preview></div>
+          <div class="nu-live-editor">
+            <header class="nu-live-editor-head">
+              <h4 class="nu-live-editor-title">Live Editor</h4>
+              <div class="nu-row">
+                <span class="nu-help" data-live-status></span>
+                <button class="nu-btn nu-btn-sm" type="button" data-live-run>Run</button>
+                <button class="nu-btn nu-btn-sm" type="button" data-live-reset>Reset</button>
+              </div>
+            </header>
+            <textarea class="nu-live-textarea" data-live-editor spellcheck="false" aria-label="Live HTML editor"></textarea>
+          </div>
+        </article>
+
+        <article class="nu-doc-card nu-hidden" data-pane="code">
+          <header class="nu-doc-head">
+            <h3 class="nu-doc-title">Snippet</h3>
+            <a class="nu-doc-path" href="#" data-raw-path></a>
+          </header>
+          <pre class="nu-doc-code" data-code></pre>
+        </article>
+
+        <article class="nu-doc-card nu-hidden" data-pane="usage">
+          <header class="nu-doc-head">
+            <h3 class="nu-doc-title">Integration</h3>
+            <button class="nu-btn nu-btn-sm" type="button" data-copy-usage>Copy Usage</button>
+          </header>
+          <pre class="nu-doc-code" data-usage></pre>
+        </article>
+      </section>
+
+      <aside class="nu-page-side">
+        <article class="nu-doc-card">
+          <header class="nu-doc-head">
+            <h3 class="nu-doc-title">View Modes</h3>
+          </header>
+          <div class="nu-doc-preview">
+            <div class="nu-stack">
+              <p class="nu-help" style="margin: 0;">`Preview`: rendered component output.</p>
+              <p class="nu-help" style="margin: 0;">`Snippet`: exact copy-paste HTML.</p>
+              <p class="nu-help" style="margin: 0;">`Integration`: shell + snippet + runtime init.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="nu-doc-card">
+          <header class="nu-doc-head">
+            <h3 class="nu-doc-title">Registry</h3>
+          </header>
+          <div class="nu-doc-preview nu-stack">
+            <a class="nu-btn nu-btn-sm" href="../registry.html">Back to registry</a>
+            <p class="nu-help" style="margin: 0;">Each page keeps preview, raw snippet, and copy-ready usage in one place.</p>
+          </div>
+        </article>
+      </aside>
+    </div>
+
+    <template data-snippet>
+<form class="nu-form" aria-label="Login form">
+  <div class="nu-field">
+    <label class="nu-label" for="login-email">Email</label>
+    <input class="nu-input" id="login-email" type="email" placeholder="admin@school.edu">
+  </div>
+  <div class="nu-field">
+    <label class="nu-label" for="login-password">Password</label>
+    <input class="nu-input" id="login-password" type="password" placeholder="Enter password">
+  </div>
+  <label class="nu-check">
+    <input class="nu-check-input" type="checkbox" checked>
+    <span class="nu-check-box"></span>
+    <span class="nu-check-label">Remember this device</span>
+  </label>
+  <div class="nu-form-actions">
+    <button class="nu-btn" type="button">Cancel</button>
+    <button class="nu-btn nu-btn-solid" type="submit">Sign in</button>
+  </div>
+</form>
+    </template>
+  </main>
+
+  <script src="../scripts/components.js"></script>
+  <script src="./page.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>noir-ui registry</title>
+  <link rel="stylesheet" href="./styles/noir-ui.css">
+</head>
+<body class="nu-theme">
+  <nav class="nu-registry-nav">
+    <a class="nu-registry-brand" href="./index.html">
+      <span class="nu-registry-mark"></span>
+      <span>noir-ui</span>
+    </a>
+    <div class="nu-row">
+      <a class="nu-btn nu-btn-sm" href="./index.html">Home</a>
+      <a class="nu-btn nu-btn-sm nu-btn-solid" href="./registry.html">Registry</a>
+    </div>
+  </nav>
+  <main class="nu-container" style="padding: 36px 0 60px;">
+    <header class="nu-section nu-page-top">
+      <nav class="nu-breadcrumb" aria-label="Breadcrumb">
+        <a href="./index.html">noir-ui</a>
+        <span class="nu-crumb-sep">/</span>
+        <span>registry</span>
+      </nav>
+
+      <h1 class="nu-headline" style="margin: 0;">Component Registry</h1>
+
+      <div class="nu-row">
+        <span class="nu-badge" id="componentCountBadge">0 components</span>
+        <span class="nu-badge">Copy-paste</span>
+        <span class="nu-badge">No framework dependency</span>
+      </div>
+
+      <div class="nu-registry-tools">
+        <div class="nu-input-wrap nu-registry-search">
+          <span class="nu-input-icon">&#8981;</span>
+          <input id="registrySearch" class="nu-input has-icon" type="text" placeholder="Search components...">
+        </div>
+        <div class="nu-registry-filters" id="registryFilters" aria-label="Component category filters"></div>
+      </div>
+    </header>
+
+    <section class="nu-section">
+      <article class="nu-doc-card">
+        <header class="nu-doc-head">
+          <h3 class="nu-doc-title">Base Setup</h3>
+          <div class="nu-row">
+            <span class="nu-copy-status" id="setupStatus"></span>
+            <button class="nu-btn nu-btn-sm" type="button" id="copySetup">Copy</button>
+          </div>
+        </header>
+        <div class="nu-doc-preview">
+          <div class="nu-callout is-info">
+            <strong>How to use</strong>
+            Drop `noir-ui.css`, add `scripts/components.js`, run `window.noirComponents.init()`, then paste snippets.
+          </div>
+        </div>
+        <pre class="nu-doc-code" id="setupCode"></pre>
+      </article>
+    </section>
+
+    <section class="nu-section">
+      <p class="nu-section-title">Browse Components</p>
+      <div id="registryRoot" class="nu-registry-sections"></div>
+    </section>
+  </main>
+
+  <footer class="nu-footer" style="width: min(1400px, 100% - 96px); margin: 0 auto; padding-bottom: 24px;">
+    <div class="nu-footer-meta">
+      <span>Copyright &copy; 2026 Benjamin Lee</span>
+      <span>All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="./index.js"></script>
+</body>
+</html>

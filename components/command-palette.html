@@ -1,0 +1,17 @@
+<div class="nu-overlay-demo" data-nu-command-palette>
+  <button class="nu-btn nu-btn-solid" type="button" data-nu-open aria-haspopup="dialog">Open Command Palette</button>
+  <div class="nu-overlay-backdrop" data-nu-overlay></div>
+  <section class="nu-command-palette" data-nu-panel role="dialog" aria-label="Command palette" aria-modal="true">
+    <header class="nu-command-search">
+      <input class="nu-input" type="text" placeholder="Type a command..." data-nu-input aria-label="Command search">
+    </header>
+    <div class="nu-command-list" role="listbox" aria-label="Commands">
+      <button class="nu-command-item" type="button" data-nu-item role="option">Open classes <span class="nu-command-kbd">G C</span></button>
+      <button class="nu-command-item" type="button" data-nu-item role="option">Search teacher <span class="nu-command-kbd">G T</span></button>
+      <button class="nu-command-item" type="button" data-nu-item role="option">Toggle compact mode <span class="nu-command-kbd">C</span></button>
+    </div>
+    <div class="nu-row" style="padding: 10px; border-top: 1px solid var(--nu-border);">
+      <button class="nu-btn nu-btn-sm" type="button" data-nu-close>Close</button>
+    </div>
+  </section>
+</div>
