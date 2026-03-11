@@ -7,9 +7,9 @@ Use it as a separate package/repo root.
 
 ## Project Docs
 
-- `README`: `./README.md`
-- `Contributing`: `./CONTRIBUTING.md`
-- `License`: `./LICENSE`
+- `README`: <https://github.com/sihooleebd/ui/blob/main/README.md>
+- `Contributing`: <https://github.com/sihooleebd/ui/blob/main/CONTRIBUTING.md>
+- `License`: <https://github.com/sihooleebd/ui/blob/main/LICENSE>
 
 ## Quick Start
 
