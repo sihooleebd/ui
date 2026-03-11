@@ -24,8 +24,9 @@
       <a class="nu-btn nu-btn-sm nu-btn-solid" href="./pages/command-palette.html" data-lucky>I'm Feeling Lucky</a>
     </nav>
 
+    <!-- hero — centred, cinematic -->
     <section class="nl-hero">
-      <article class="nl-hero-main nl-reveal" data-reveal style="--d: 0.04s;">
+      <article class="nl-hero-main nl-reveal" data-reveal style="--d: 0.05s;">
         <p class="nl-kicker">Minimal Luxury Interface Library</p>
         <h1 class="nl-headline">
           Built for<br>
@@ -48,7 +49,7 @@
         </ul>
       </article>
 
-      <aside class="nl-hero-side nl-reveal" data-reveal style="--d: 0.08s;">
+      <aside class="nl-hero-side nl-reveal" data-reveal style="--d: 0.12s;">
         <header class="nl-side-head">
           <p>Now Shipping</p>
           <span>v2</span>
@@ -64,7 +65,7 @@
             <strong>15</strong>
           </article>
           <article class="nl-side-item" role="listitem">
-            <p>Overlays/Advanced Forms</p>
+            <p>Overlays/Advanced</p>
             <strong>15</strong>
           </article>
           <article class="nl-side-item" role="listitem">
@@ -85,7 +86,8 @@
       </aside>
     </section>
 
-    <section class="nl-rack nl-reveal" data-reveal style="--d: 0.12s;">
+    <!-- stats -->
+    <section class="nl-rack nl-reveal" data-reveal style="--d: 0.16s;">
       <article class="nl-rack-item">
         <p>Component pages</p>
         <h3>85</h3>
@@ -104,29 +106,31 @@
       </article>
     </section>
 
+    <!-- features -->
     <section class="nl-grid">
-      <article class="nl-card nl-reveal" data-reveal style="--d: 0.16s;">
+      <article class="nl-card nl-reveal" data-reveal style="--d: 0.04s;">
         <h3>Editorial Typographic System</h3>
         <p>High-contrast hierarchy with serif headlines and mono metadata keeps dashboards legible and premium.</p>
       </article>
 
-      <article class="nl-card nl-reveal" data-reveal style="--d: 0.2s;">
+      <article class="nl-card nl-reveal" data-reveal style="--d: 0.08s;">
         <h3>Surface-Driven Layout Primitives</h3>
         <p>Shells, rails, drawers, and resizable panels form reliable scaffolding for real product workflows.</p>
       </article>
 
-      <article class="nl-card nl-reveal" data-reveal style="--d: 0.24s;">
+      <article class="nl-card nl-reveal" data-reveal style="--d: 0.12s;">
         <h3>Advanced Interaction Patterns</h3>
         <p>Command palette, context menu, date range, and toast stack work through one shared initialization API.</p>
       </article>
 
-      <article class="nl-card nl-reveal" data-reveal style="--d: 0.28s;">
+      <article class="nl-card nl-reveal" data-reveal style="--d: 0.16s;">
         <h3>Copy-Paste Deployment</h3>
         <p>Open any component page, switch to Snippet or Integration tab, and move directly into implementation.</p>
       </article>
     </section>
 
-    <section class="nl-demo nl-reveal" data-reveal style="--d: 0.32s;" aria-label="Composed interface preview">
+    <!-- composition demo -->
+    <section class="nl-demo nl-reveal" data-reveal style="--d: 0.06s;" aria-label="Composed interface preview">
       <header class="nl-demo-head">
         <p>Composition Preview</p>
         <span>app-shell + command-bar + table + inspector</span>
@@ -166,7 +170,8 @@
       </div>
     </section>
 
-    <section class="nl-cta nl-reveal" data-reveal style="--d: 0.36s;">
+    <!-- CTA -->
+    <section class="nl-cta nl-reveal" data-reveal style="--d: 0.06s;">
       <div class="nl-cta-copy">
         <h2>Start Building</h2>
         <p>Use registry filters, open any component page, and copy implementation-ready markup in seconds.</p>
@@ -177,7 +182,7 @@
       </div>
     </section>
 
-    <footer class="nu-footer nl-footer nl-reveal" data-reveal style="--d: 0.4s;">
+    <footer class="nu-footer nl-footer nl-reveal" data-reveal style="--d: 0.06s;">
       <div class="nu-footer-main">
         <div class="nu-footer-brand">
           <span class="nu-footer-mark nl-logo-wave" aria-hidden="true"></span>
@@ -202,6 +207,34 @@
       </div>
     </footer>
   </main>
+
+  <script>
+    (function () {
+      var host = window.location.hostname;
+      if (
+        window.location.protocol === 'file:' ||
+        host === 'localhost' ||
+        host === '127.0.0.1' ||
+        host === '0.0.0.0'
+      ) {
+        return;
+      }
+
+      if (document.querySelector('script[data-vercel-analytics]')) {
+        return;
+      }
+
+      window.va = window.va || function () {
+        (window.vaq = window.vaq || []).push(arguments);
+      };
+
+      var analyticsScript = document.createElement('script');
+      analyticsScript.defer = true;
+      analyticsScript.src = '/_vercel/insights/script.js';
+      analyticsScript.setAttribute('data-vercel-analytics', 'true');
+      document.head.appendChild(analyticsScript);
+    })();
+  </script>
 
   <script>
     (function () {
@@ -246,7 +279,7 @@
             observer.unobserve(entry.target);
           }
         }
-      }, { threshold: 0.16, rootMargin: '0px 0px -48px 0px' });
+      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 
       for (var k = 0; k < items.length; k += 1) {
         observer.observe(items[k]);

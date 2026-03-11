@@ -2694,10 +2694,16 @@
 }
 
 .nu-doc-card {
-  border: 1px solid var(--nu-border);
-  border-radius: var(--nu-radius);
-  background: var(--nu-surface);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.015);
   overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  transition: border-color 0.3s ease;
+}
+
+.nu-doc-card:hover {
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 .nu-doc-head {
@@ -2705,39 +2711,57 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 10px 12px;
-  border-bottom: 1px solid var(--nu-border);
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.01);
 }
 
 .nu-doc-title {
   margin: 0;
   color: var(--nu-text);
   font-family: var(--nu-mono);
-  font-size: 11px;
+  font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
+  letter-spacing: 1px;
 }
 
 .nu-doc-preview {
-  padding: 12px;
+  padding: 16px;
 }
 
 .nu-doc-card[data-pane='preview'] {
   position: relative;
   z-index: 2;
   overflow: visible;
+  border-color: rgba(196, 164, 108, 0.1);
+}
+
+/* spotlight effect behind preview */
+.nu-doc-card[data-pane='preview']::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 80%;
+  height: 60%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center top, rgba(196, 164, 108, 0.03), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .nu-doc-preview[data-preview] {
-  min-height: clamp(320px, 46vh, 520px);
-  padding: 16px;
+  position: relative;
+  z-index: 1;
+  min-height: clamp(340px, 48vh, 560px);
+  padding: 24px;
   overflow: visible;
 }
 
 .nu-live-editor {
-  border-top: 1px solid var(--nu-border);
-  background: #101217;
-  padding: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 14px 16px;
 }
 
 .nu-live-editor-head {
@@ -2745,7 +2769,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .nu-live-editor-title {
@@ -2753,40 +2777,42 @@
   color: var(--nu-text-mid);
   font-family: var(--nu-mono);
   font-size: 10px;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
 }
 
 .nu-live-textarea {
   width: 100%;
   min-height: 220px;
-  border: 1px solid var(--nu-border);
-  border-radius: 6px;
-  background: #0f1014;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.25);
   color: var(--nu-text-mid);
   font-family: var(--nu-mono);
   font-size: 11px;
-  line-height: 1.6;
-  padding: 10px 12px;
+  line-height: 1.65;
+  padding: 12px 14px;
   resize: vertical;
   outline: none;
+  transition: border-color 0.25s, color 0.25s;
 }
 
 .nu-live-textarea:focus {
-  border-color: var(--nu-accent-dim);
+  border-color: rgba(196, 164, 108, 0.3);
   color: var(--nu-text);
+  box-shadow: 0 0 0 3px rgba(196, 164, 108, 0.05);
 }
 
 .nu-doc-code {
   margin: 0;
-  border-top: 1px solid var(--nu-border);
-  background: #101013;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.2);
   color: var(--nu-text-mid);
   font-family: var(--nu-mono);
   font-size: 10px;
-  line-height: 1.6;
+  line-height: 1.7;
   overflow-x: auto;
-  padding: 12px;
+  padding: 16px;
   white-space: pre;
 }
 
@@ -2837,22 +2863,42 @@
 }
 
 .nu-registry-card {
-  border: 1px solid var(--nu-border);
-  border-radius: var(--nu-radius);
-  background: linear-gradient(var(--nu-surface), var(--nu-surface-2));
-  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.015);
+  padding: 18px 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  transition: all 0.2s;
+  transition: all 0.3s ease;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.nu-registry-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(196, 164, 108, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .nu-registry-card:hover {
-  border-color: var(--nu-border-light);
-  transform: translateY(-1px);
+  border-color: rgba(196, 164, 108, 0.12);
+  background: rgba(196, 164, 108, 0.02);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.nu-registry-card:hover::before {
+  opacity: 1;
 }
 
 .nu-registry-card:focus-visible {
@@ -2888,30 +2934,63 @@
 .nu-page-shell {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
+  animation: nu-page-enter 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes nu-page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nu-page-top {
-  border: 1px solid var(--nu-border);
-  border-radius: var(--nu-radius);
-  background: linear-gradient(var(--nu-surface), var(--nu-surface-2));
-  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(196, 164, 108, 0.04), transparent 50%),
+    rgba(255, 255, 255, 0.015);
+  padding: 28px 24px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* subtle gold edge on top */
+.nu-page-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(196, 164, 108, 0.25), transparent);
+}
+
+.nu-page-top .nu-headline {
+  font-size: clamp(36px, 5.5vw, 52px);
+  letter-spacing: -0.8px;
 }
 
 .nu-page-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
-  gap: 12px;
+  gap: 16px;
   align-items: start;
 }
 
 .nu-page-main {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .nu-page-view {
@@ -2924,10 +3003,10 @@
 
 .nu-page-side {
   position: sticky;
-  top: 14px;
+  top: 18px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .nu-page-nav {
@@ -2990,6 +3069,22 @@
   display: none !important;
 }
 
+/* pane entrance animation */
+.nu-doc-card[data-pane]:not(.nu-hidden) {
+  animation: nu-pane-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes nu-pane-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes nu-fade-in {
   from {
     opacity: 0;
@@ -3049,15 +3144,20 @@
 
   .nu-doc-preview[data-preview] {
     min-height: 260px;
-    padding: 12px;
+    padding: 14px;
   }
 
   .nu-live-textarea {
     min-height: 180px;
   }
 
+  .nu-page-top {
+    padding: 20px 16px;
+  }
+
   .nu-page-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .nu-page-side {

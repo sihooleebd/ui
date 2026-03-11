@@ -1,4 +1,32 @@
 (function () {
+  function injectVercelAnalytics() {
+    const host = window.location.hostname;
+    if (
+      window.location.protocol === 'file:' ||
+      host === 'localhost' ||
+      host === '127.0.0.1' ||
+      host === '0.0.0.0'
+    ) {
+      return;
+    }
+
+    if (document.querySelector('script[data-vercel-analytics]')) {
+      return;
+    }
+
+    window.va = window.va || function () {
+      (window.vaq = window.vaq || []).push(arguments);
+    };
+
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = '/_vercel/insights/script.js';
+    script.setAttribute('data-vercel-analytics', 'true');
+    document.head.appendChild(script);
+  }
+
+  injectVercelAnalytics();
+
   function trimTemplate(value) {
     const lines = value.replace(/^\n+|\n+$/g, '').split('\n');
     const indents = lines
